@@ -12,20 +12,18 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "_constrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-
-# Site Settings
-locale                   : "en-US"
-title                    : "데이터를 통한 금융 분석"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Chan"
-description              : ""
-url                      : "https://chanspick.github.io/"
+minimal_mistakes_skin    : "contrast" # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise" 중에 원하는 스킨으로 선택한다.
+locale                   : "so_KR" # 언어 설정이며 ko-KR 로 설정하면 한국어로 바뀐다.
+title                    : "데이터를 통한 금융 분석" # 블로그 이름
+subtitle                 : # 부제목으로, 블로그 이름 밑에 작게 표시된다.
+name                     : "chanspick" # 이름
+description              : "셀프 참조 블로그+DSL 스터디 정리+자격증 이외 개인 공부 정리" # 설명
+url                      : "https://chanspick.github.io" # https://깃허브유저네임.github.io 형식으로 입력하면된다.
+baseurl                  : "/blog" # baseurl을 사용하고 있으면 입력하면된다.
+teaser                   : # 연관포스트나 검색 등에서 미리보기 사진을 설정하고 싶으면 넣으면된다.# path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
