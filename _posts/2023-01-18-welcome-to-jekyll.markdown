@@ -1,24 +1,24 @@
 ---
 layout: single
 
-title: "포스트의 제목"
-excerpt: "발췌부분 설정하면 이 글이 들어가고, 설정하지 않는다면 글의 첫 문단이 들어가게됨"
+title: "MLops 개론 - (0)"
+excerpt: "MLops 개론 및 간단한 설명"
 
-date: 2023-01-19 13:45:00 +0900
-lastmod: 2023-01-19 13:45:00 +0900 # sitemap.xml에서 사용됨
+date: 2023-01-19 20:00:00 +0900
+lastmod: 2023-01-19 20:00:00 +0900 # sitemap.xml에서 사용됨
 
-author_profile: false # 왼쪽부분 프로필을 띄울건지
+author_profile: True # 왼쪽부분 프로필을 띄울건지
 
 header:
   overlay_image: https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80
   overlay_filter: 0.5 # 투명도
 
 categories: 
-  - test post
+  - data
 
 tags: 
-    - test
-    - theme
+    - data
+    
 
 # table of contents
 toc: true # 오른쪽 부분에 목차를 자동 생성해준다.
@@ -26,26 +26,118 @@ toc_label: "table of content" # toc 이름 설정
 toc_icon: "bars" # 아이콘 설정
 toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+### 'MLops' 란 무엇일까?
 
-Jekyll requires blog post files to be named according to the following format:
+기존 ML 프로젝트 진행에 있어, 프로젝트 진행자들은 여러가지 툴, 가령 'R','Python' 등 자신이 사용하던 체제에서 프로젝트를 진행했다. 여러분이 가장 최근 진행했던 프로젝트, 공모전, 회사에서 사용한 모델들에서 가장 성능이 좋았던 모델의 정보를 기억하는가? 그렇다면 가장 성능이 좋지 않았던 모델에 대해서는 어떤가?
 
-`YEAR-MONTH-DAY-title.MARKUP`
+그 모델에서 사용한 라이브러리의 버전은 또 어떨까? 여러분이 사용한 데이터와 모델을 그대로 사용하면 그때 그 모델이 재현되는가? 이러한 질문들에 대답하기 위해, 나아가 여러분이 개발한 ML 모델들의 환경을 통일해주기 위해 MLops는 사용된다.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+그래서 언제까지 코랩 쓰실건데요! / 어떤 모델이 제일 좋았나요? 라는 질문에 당당하게 답해보자. 
+제 'Docker'를 확인해주세요.
 
-Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+### 'Docker'
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+'Docker'는 여러분의 개발 환경을 그대로 묶어서 전달해준다. 
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+도커의 작용 기전을 단순화하면 이미지를 받아, 컨테이너를 쌓아서 올린 후 'Dockefile'로 묶어서 하나의 이미지를 만드는 것이다. 이미지를 음식의 레시피, 컨테이너를 레시피에 따라 만들어진 음식으로 생각하면 된다. 이러한 레시피를 모아놓은 공간이 바로 도커 레지스트리다.
+
+설치는 각자의 OS에 맞게 진행하고, 도커를 설치한 뒤 간단한 실습 코드로 도커파일을 만들어보고, 이미지를 만든 뒤 개인 레지스트리에 업로하는 과정까지를 다뤄보도록 하자.
+
+
+#### 실습 코드 진행
+
+[Reference][reference]
+
+1) Docker pull
+
+image repository로부터 Docker image를 가져옵니다.
+
+```bash
+$ docker pull --help
+```
+
+
+2) Docker images
+
+로컬에 존재하는 Docker image 리스를 가져옵니다.
+
+```bash
+$ docker images --help
+```
+
+3) Docker ps
+
+현재 실행중인 도커 컨테이너 리스트를 가져옵니다.
+
+```bash
+$ docker ps --help
+```
+
+4) Docker run 
+
+현재 컨테이너를 실행시키는 커맨드입니다.
+
+
+```bash
+$ docker exec --help
+```
+
+* options
+
+  * `-it` : `-i` 옵션 + `-t` 옵션
+    * container 를 실행시킴과 동시에 interactive 한 terminal 로 접속시켜주는 옵션
+
+  * `--name` : name
+    * 컨테이너 id 대신, 구분하기 쉽도록 지정해주는 이름
+
+  * `/bin/bash`
+    * 컨테이너를 실행시킴과 동시에 실행할 커맨드로, `/bin/bash` 는 bash 터미널을 사용하는 것을 의미합니다.
+
+
+5) Docker exec
+
+도커 내부에 들어가거나, 내부에서 명령을 내리는 커맨드입니다.
+
+
+```bash
+$ docker exec --help
+```
+
+6) Docker logs
+
+도커 컨테이너의 로그를 확인하는 커맨드입니다.
+
+```bash
+$ docker images --help
+```
+
+* option 
+  * f 옵션: 계속 watch 하며 출력
+
+
+7) Docker stop
+
+실행중인 도커 컨테이너를 중단하는 커맨드입니다.
+
+```bash
+$ docker stop --help
+```
+
+8) Docker rm
+
+도커 컨테이너를 삭제하는 커맨드입니다.
+
+```bash
+$ docker rm --help
+```
+
+9) Docker rmi
+
+도커 이미지를 삭제하는 커맨드입니다.
+
+```bash
+$ docker rmi --help
+```
+
+[reference]: https://jaeyeon-kim.notion.site/Docker-1-2-be5f796e34ac4903af0c97e59f1eb98e
