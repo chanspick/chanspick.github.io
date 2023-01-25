@@ -10,11 +10,11 @@ header:
 categories:
   - data
 tags:
-  - [Blog, jekyll, Github, Git]
+  - [data, MLops, Engineering]
 
 
-date: 2020-05-25
-last_modified_at: 2020-05-25
+date: 2023-01-19
+last_modified_at: 2023-01-19
 # table of contents
 toc: true # 오른쪽 부분에 목차를 자동 생성해준다.
 toc_label: "table of content" # toc 이름 설정
