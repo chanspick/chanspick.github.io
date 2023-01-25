@@ -1,7 +1,7 @@
 ---
 title: "금융 관련"
 layout: archive
-permalink: categories/finance
+permalink: categories/Finance
 author_profile: true
 sidebar_main: true
 ---

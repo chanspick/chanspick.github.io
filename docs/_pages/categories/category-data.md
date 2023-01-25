@@ -1,7 +1,7 @@
 ---
 title: "데이터 관련"
 layout: archive
-permalink: categories/data
+permalink: categories/Data
 author_profile: true
 sidebar_main: true
 ---
