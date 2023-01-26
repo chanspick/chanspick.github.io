@@ -8,9 +8,9 @@ header:
   overlay_filter: 0.5 # 투명도
 
 categories:
-  - data
+  - Analysis
 tags:
-  - [data, modeling]
+  - [Anlaysis]
 
 
 date: 2023-01-19
@@ -22,3 +22,4 @@ toc_icon: "bars" # 아이콘 설정
 toc_sticky: true # 마우스 스크롤과 함께 내려갈 것인지 설정
 ---
 
+ab

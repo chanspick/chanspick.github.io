@@ -1,10 +1,10 @@
 ---
-title: "금융 관련"
+title: "자동 매매"
 layout: archive
-permalink: categories/Finance
+permalink: categories/Algorithm
 author_profile: true
 sidebar_main: true
 ---
 
-{% assign posts = site.categories.Finance] %}
+% assign posts = site.categories.Algorithm %}
 {% for post in posts %} {% include archive-single2.html type=page.entries_layout %} {% endfor %}
