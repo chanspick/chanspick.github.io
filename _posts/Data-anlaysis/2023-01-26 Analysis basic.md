@@ -13,8 +13,8 @@ tags:
   - [Analysis]
 
 
-date: 2023-01-19
-last_modified_at: 2023-01-19
+date: 2023-01-26
+last_modified_at: 2023-01-26
 # table of contents
 toc: true # 오른쪽 부분에 목차를 자동 생성해준다.
 toc_label: "table of content" # toc 이름 설정

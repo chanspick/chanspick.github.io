@@ -10,7 +10,7 @@ header:
 categories:
   - Analysis
 tags:
-  - [Anlaysis]
+  - [Analysis]
 
 
 date: 2023-01-19
