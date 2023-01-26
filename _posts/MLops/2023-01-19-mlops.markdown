@@ -8,9 +8,9 @@ header:
   overlay_filter: 0.5 # 투명도
 
 categories:
-  - data
+  - MLops
 tags:
-  - [data, MLops, Engineering]
+  - [MLops]
 
 
 date: 2023-01-19

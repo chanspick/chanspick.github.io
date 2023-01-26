@@ -8,9 +8,9 @@ header:
   overlay_filter: 0.5 # 투명도
 
 categories:
-  - data
+  - Analysis
 tags:
-  - [data, modeling]
+  - [Analysis]
 
 
 date: 2023-01-19
