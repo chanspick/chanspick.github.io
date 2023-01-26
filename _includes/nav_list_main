@@ -21,7 +21,7 @@
             
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Model" %}
+                    {% if category[0] == "Models" %}
                         <li><a href="/categories/models" class="">머신러닝 모델 정리 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
